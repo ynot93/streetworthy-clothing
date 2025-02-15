@@ -1,38 +1,224 @@
-.App {
+/* App.css */
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap'); /* Import a calligraphy font */
+
+:root {
+  --primary-color: black;
+  --secondary-color: white;
+  --background-image: url('./assets/background.jpg'); /* Correct path to background image */
+}
+
+.app {
+  font-family: sans-serif;
+  color: var(--secondary-color);
+  background-color: var(--primary-color);
+  overflow-x: hidden; /* Prevent horizontal scrollbar on card animation */
+}
+
+/* Hero Section */
+.hero {
+  background-color: var(--primary-color);
+  padding: 20px;
+}
+
+.hero-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.hero-logo {
+  max-height: 500px;
+}
+
+.hero-text {
+  flex: 1;
+  padding-left: 20px;
+}
+
+.hero-text h1 {
+  font-size: 3em;
+  margin-bottom: 10px;
+  font-family: 'Great Vibes', cursive; /* Use calligraphy font */
+}
+
+.hero-image {
+  max-width: 45%;
+  height: auto;
+  border-radius: 8px;
+}
+
+/* Questionnaire Section */
+.questionnaire {
+  background-image: var(--background-image);
+  background-size: cover;
+  background-position: center;
+  padding: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 500px;
+}
+
+.questionnaire-content {
+  display: flex;
+  width: 80%;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 20px;
+  align-items: center;
+}
+
+.questionnaire-title,
+.questionnaire-form {
+  flex: 1;
+}
+
+.questionnaire h2 {
+  font-family: 'Great Vibes', cursive; /* Use calligraphy font */
+  color: var(--secondary-color);
+  font-size: 4em;
+}
+.questionnaire p {
+    color: var(--secondary-color);
+    font-family: 'Great Vibes', cursive; /* Use calligraphy font */
+    font-size: 3em;
+}
+
+.questionnaire form {
+  display: flex;
+  flex-direction: column;
+}
+
+.questionnaire label {
+  margin-bottom: 10px;
+  color: var(--secondary-color);
+}
+
+.questionnaire button {
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Showcase Section */
+.showcase {
+  background-color: var(--primary-color);
+  padding: 50px;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.showcase h2 {
+  margin-bottom: 20px;
+  font-family: 'Great Vibes', cursive; /* Use calligraphy font */
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.product-list {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-wrap: wrap;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  gap: 20px;
 }
 
-.App-link {
-  color: #61dafb;
+.product-card {
+  width: 30%;
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: #333;
+  transition: transform 0.3s ease-in-out; /* Add transition for animation */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.product-card:hover {
+  transform: scale(1.05); /* Scale up on hover */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
+}
+
+
+.product-image {
+  width: 100%;
+  height: auto;
+  display: block; /* Prevent image from creating extra space */
+}
+
+.product-details {
+  padding: 20px;
+}
+
+.product-details h3 {
+  margin-bottom: 10px;
+  color: var(--secondary-color);
+  font-family: 'Great Vibes', cursive; /* Use calligraphy font */
+  font-size: 2em;
+}
+
+.product-details p {
+  margin-bottom: 5px;
+  color: var(--secondary-color);
+  font-family: 'Great Vibes', cursive; /* Use calligraphy font */
+  font-size: 1em;
+}
+
+/* Footer */
+.footer {
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+  padding: 20px;
+  text-align: center;
+}
+
+.footer h3 {
+  margin-bottom: 10px;
+  font-family: 'Great Vibes', cursive; /* Use calligraphy font */
+  font-size: 3em;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-around;
+}
+
+.footer-column {
+  flex: 1; /* Equal width columns */
+}
+
+.footer h4 {
+  margin-bottom: 5px;
+  font-family: 'Great Vibes', cursive; /* Use calligraphy font */
+  font-size: 2em;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .hero-content {
+    flex-direction: column;
+    align-items: flex-start;
   }
-  to {
-    transform: rotate(360deg);
+
+  .hero-image {
+    max-width: 100%;
+    margin-top: 20px;
+  }
+
+  .product-card {
+    width: 45%;
+  }
+
+    .questionnaire-content {
+        flex-direction: column;
+    }
+
+    .questionnaire-title, .questionnaire-form {
+        flex: 1;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+  .product-card {
+    width: 100%;
   }
 }
