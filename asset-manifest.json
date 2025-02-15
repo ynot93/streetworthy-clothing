@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/streetworthy-clothing/static/css/main.f6b26471.css",
+    "main.js": "/streetworthy-clothing/static/js/main.d658b793.js",
+    "static/media/background-bw.png": "/streetworthy-clothing/static/media/background-bw.e069d403236271418cf3.png",
+    "static/media/product3.png": "/streetworthy-clothing/static/media/product3.7d6d172354a9d595019b.png",
+    "static/media/product2.png": "/streetworthy-clothing/static/media/product2.e4776bd732abfda08e60.png",
+    "static/media/product1.png": "/streetworthy-clothing/static/media/product1.6d86bf373d066db674c9.png",
+    "static/media/hero-image.png": "/streetworthy-clothing/static/media/hero-image.7838320dcceef6b62783.png",
+    "static/media/background.jpg": "/streetworthy-clothing/static/media/background.0ccf87863b3ba8cd1724.jpg",
+    "static/media/logo.png": "/streetworthy-clothing/static/media/logo.f091d3efe06165e97ecb.png",
+    "index.html": "/streetworthy-clothing/index.html",
+    "main.f6b26471.css.map": "/streetworthy-clothing/static/css/main.f6b26471.css.map",
+    "main.d658b793.js.map": "/streetworthy-clothing/static/js/main.d658b793.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f6b26471.css",
+    "static/js/main.d658b793.js"
+  ]
+}
